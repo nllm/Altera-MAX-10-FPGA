@@ -1,0 +1,69 @@
+//This program lets the units at the end of the clock adjust to start over
+
+module unidadesh (input a, output reg [6:0] Display, output reg b);
+reg [3:0] conta;
+reg [5:0] conta2;
+
+always @(negedge a)
+begin
+	conta=conta+1;
+	conta2=conta2+1;
+	if (conta>9)
+	begin
+		conta=0;
+		b=~b;
+	end
+	if(conta2>25)
+	begin
+	conta=0;
+	conta2=0;
+	b=~b;
+	end
+	case (conta)
+	4'b0000:
+	begin
+		Display=7'b1000000;
+	end
+	4'b0001:
+	begin
+		Display=7'b1111001;
+		b=~b;
+	end
+	4'b0010:
+	begin
+		Display=7'b0100100;
+	end
+	4'b0011:
+	begin
+		Display=7'b0110000;
+	end
+	4'b0100:
+	begin
+		Display=7'b0011001;
+	end
+	4'b0101:
+	begin
+		Display=7'b0010010;
+	end
+	4'b0110:
+	begin
+		Display=7'b0000010;
+	end
+	4'b0111:
+	begin
+		Display=7'b1111000;
+	end
+	4'b1000:
+	begin
+		Display=7'b0000000;
+	end
+	4'b1001:
+	begin
+		Display=7'b0010000;
+		conta2= conta2+1;
+	end
+	endcase
+	
+	
+end
+endmodule
