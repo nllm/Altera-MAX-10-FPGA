@@ -1,6 +1,6 @@
 //This program lets the units at the end of the clock adjust to start over
 
-module unidadesh (input a, output reg [6:0] Display, output reg b);
+module units_end (input a, output reg [6:0] Display, output reg b);
 reg [3:0] conta;
 reg [5:0] conta2;
 
