@@ -1,6 +1,6 @@
 //Units program 
 
-module unidades (input a, output reg [6:0] Display, output reg b);
+module units (input a, output reg [6:0] Display, output reg b);
 reg [3:0] conta;
 
 always @(negedge a)
