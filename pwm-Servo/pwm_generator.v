@@ -2,9 +2,9 @@
 
 module pwm_generator (input clk, input [3:0] duty, output reg senal);
 reg [6:0] contador;
-wire reloj100hz;
+wire clock100hz;
 
-100hz_clock U1(.clk(clk),.senal(reloj100hz));
+clock100hz U1(.clk(clk),.senal(reloj100hz));
 
 always @ (posedge reloj100hz)
 begin
