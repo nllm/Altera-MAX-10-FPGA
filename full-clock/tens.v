@@ -1,6 +1,6 @@
 //This program is to control the tens
 
-module decenas (input a, output reg [6:0] Display, output reg c);
+module tens (input a, output reg [6:0] Display, output reg c);
 reg [3:0] conta;
 
 always @(negedge a)
