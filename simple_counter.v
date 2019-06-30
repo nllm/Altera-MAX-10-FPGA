@@ -1,3 +1,5 @@
+//This program uses a 7-segment display to show a simpel counter
+
 module simple_counter (input a, output reg [6:0] Display);
 reg [3:0] conta;
 
