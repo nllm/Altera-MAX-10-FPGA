@@ -1,6 +1,6 @@
 // 100 Hz Clock to generate PWM
 
-module reloj100hz(input clk, output senal);	//es de 50 hz
+module clock100hz(input clk, output senal);	//es de 50 hz
 reg [19:0] conta;
 reg tempo; //evita que la variable serial sea registro
 
