@@ -1,4 +1,4 @@
-module practica1 (input a, output reg [6:0] Display);
+module simple_counter (input a, output reg [6:0] Display);
 reg [3:0] conta;
 
 always @(posedge a)
