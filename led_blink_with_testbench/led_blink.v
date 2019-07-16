@@ -1,3 +1,5 @@
+//Program that lets the user select the Blink frequency of a LED, between 1, 10, 50 and 100 Hz, it also includes an enable switch
+
 module led_blink(input clk, input enable,input switch1, input switch2, output led);
 
 parameter  c_1hz_value = 25'd25000000;
